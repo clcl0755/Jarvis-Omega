@@ -1,3 +1,3 @@
 @echo off
-python stark_merkez.py
+python stark_center_english.py
 pause
