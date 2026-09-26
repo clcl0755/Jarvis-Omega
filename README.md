@@ -21,7 +21,7 @@ This is not a simple chatbot; it is an autonomous tool with **full authority** o
 
 ---
 
-## 🛠️ Installation
+## 🛠️ Installation & Setup
 
 Follow these steps to boot up the system in your lab (PC):
 
@@ -34,15 +34,24 @@ Install the necessary neural networks and modules to run the system:
 
 Bash
 pip install -r requirements.txt
-3. Insert Your API Key
-Before running the code, open stark_merkez.py and insert your Groq API key (or OpenAI key) in the client configuration section:
+3. Get Your Free Groq API Key (CRITICAL STEP)
+To activate the AI core (Qwen-27b), you must provide your own Groq API key.
+
+Go to console.groq.com/keys and sign in.
+
+Click on "Create API Key", give it a name (e.g., JARVIS), and copy the generated gsk_... key.
+
+Never share this key or upload it to GitHub!
+
+4. Insert the API Key into the Code
+Open the stark_merkez.py file on your local machine using any text editor. Find line 26 and replace the placeholder with your actual API key:
 
 Python
 client = OpenAI(
     base_url="[https://api.groq.com/openai/v1](https://api.groq.com/openai/v1)",
-    api_key="INSERT_YOUR_API_KEY_HERE",
+    api_key="gsk_TEXT_YOUR_API_KEY_HERE", # Paste your key inside the quotes
 )
-4. Initialize the System
+5. Initialize the System
 
 Bash
 python stark_merkez.py
