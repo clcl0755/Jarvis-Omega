@@ -1,4 +1,4 @@
-# 🧠 J.A.R.V.I.S. HUD - OMEGA EDITION
+# 🧠 JARVIS HUD - OMEGA EDITION
 
 Inspired by Tony Stark's legendary AI assistant, this is a fully unchained autonomous system manager and assistant. Powered by Python, Tkinter, and the Qwen-27b (Groq API) infrastructure.
 
