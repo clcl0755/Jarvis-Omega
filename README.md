@@ -1,75 +1,195 @@
-# 🧠 JARVIS HUD - OMEGA EDITION
+J.A.R.V.I.S. OMEGA
 
-Inspired by Tony Stark's legendary AI assistant, this is a fully unchained autonomous system manager and assistant. Powered by Python, Tkinter, and the Qwen-27b (Groq API) infrastructure.
+J.A.R.V.I.S. OMEGA is a Windows desktop AI assistant project built with Python and Tkinter.
 
-This is not a simple chatbot; it is an autonomous tool with **full authority** over your operating system (Windows). It can launch and close applications, search the web, generate entire software projects, manage Visual Studio Code, and directly command your PC via PowerShell and CMD.
+Project Files
 
-![Python](https://img.shields.io/badge/Python-3.x-blue.svg)
-![Groq](https://img.shields.io/badge/API-Groq_Qwen_27b-orange.svg)
-![License](https://img.shields.io/badge/License-Stark_Industries-success.svg)
+stark_center_english.py — main J.A.R.V.I.S. HUD, AI/voice logic and system interaction layer.
 
----
+jarvis_gui.py — Control Center with terminal, system monitor, files, themes, settings and logs.
 
-## 🚀 Key Features
+README.md — project documentation.
 
-* **Limitless OS Authority (God Mode):** Thanks to the custom `[CMD: ...]` module, it autonomously executes terminal and PowerShell commands in the background for hardware control, network configurations, web scraping, or script execution.
-* **3D Mechanical HUD Interface:** Clickable, 3D-shaded, and dynamically lit vector buttons (Microphone, Camera, Mute). Features a minimalist data display and live voice waveform animation.
-* **Voice Communication & Auto-Read:** Speaks to you using Edge-TTS and Google Speech Recognition. When JARVIS is muted, it intelligently calculates your reading speed and keeps the text on the screen for the exact duration needed based on the response length.
-* **Dynamic Application Scanner:** If it cannot find a requested program in the registry via the standard `[AC: ...]` command, it uses PowerShell to scan your drives for hidden or portable executable (.exe) software (such as emulators) and launches them instantly.
-* **Autonomous Software Developer:** Writes the software or code you request via the `[KOD_OLUSTUR: ...]` command, creates a project folder on your desktop, and automatically opens the project using Visual Studio Code.
-* **Live Peripherals:** Dynamic IP-based local weather tracking and an OpenCV-powered integrated live camera feed.
+Features
 
----
+J.A.R.V.I.S. HUD
 
-## 🛠️ Installation & Setup
+Futuristic animated HUD interface
 
-Follow these steps to boot up the system in your lab (PC):
+System status display
 
-**1. Clone the Repository**
-```bash
-git clone [https://github.com/YOUR_USERNAME/JARVIS-HUD-Omega.git](https://github.com/YOUR_USERNAME/JARVIS-HUD-Omega.git)
-cd JARVIS-HUD-Omega
-2. Install Dependencies
-Install the necessary neural networks and modules to run the system:
+Interactive central J.A.R.V.I.S. control
 
-Bash
-pip install -r requirements.txt
-3. Get Your Free Groq API Key (CRITICAL STEP)
-To activate the AI core (Qwen-27b), you must provide your own Groq API key.
+Text command input
 
-Go to console.groq.com/keys and sign in.
+Voice interaction support
 
-Click on "Create API Key", give it a name (e.g., JARVIS), and copy the generated gsk_... key.
+File upload support
 
-Never share this key or upload it to GitHub!
+Drag-and-drop support when optional dependencies are installed
 
-4. Insert the API Key into the Code
-Open the stark_merkez.py file on your local machine using any text editor. Find line 26 and replace the placeholder with your actual API key:
+Code display panel
 
-Python
-client = OpenAI(
-    base_url="[https://api.groq.com/openai/v1](https://api.groq.com/openai/v1)",
-    api_key="gsk_TEXT_YOUR_API_KEY_HERE", # Paste your key inside the quotes
-)
-5. Initialize the System
+Clipboard support
 
-Bash
-python stark_merkez.py
-🎮 Controls & Interface
-Wake System: Toggle the system between Active/Standby modes by clicking the red radar core right in the center of the screen.
+Optional weather and camera integrations
 
-Microphone Button: Toggles voice command listening on or off.
+Control Center
 
-Camera Button: Controls the live camera feed in the top right corner.
+Interactive Windows terminal
 
-Mute Button (🔊): Turns off JARVIS's voice feedback, switching the system to silent reading (text) mode.
+Quick terminal commands
 
-Command Prompt: Right-click anywhere on the screen to open the hidden text input prompt, allowing you to type commands manually instead of using your voice.
+Command history
 
-Full Screen: Press F11 to enter full screen mode, and ESC to exit.
+Live system performance monitoring
 
-⚠️ Warning & Disclaimer
-SECURITY WARNING: This AI has the absolute authority to autonomously execute root system commands (CMD/PowerShell). The user is solely responsible for any deleted files, modified registry settings, or downloaded software. Please be fully aware of the consequences of the commands you give to your assistant (especially destructive commands like "delete", "format", or "kill").
+File/project tools
 
-Stark Industries cannot be held responsible for lost data or a rogue AI taking over the world.
+Theme and mode selection
 
+API/settings panel
+
+Command and event logs
+
+Terminal output export
+
+Themes
+
+Standard JARVIS
+
+Combat / Red Alert
+
+Stealth
+
+Hacker / Matrix
+
+Requirements
+
+Recommended:
+
+Windows 10 or Windows 11
+
+Python 3.10+
+
+Internet connection for AI/cloud features
+
+Install the common dependencies:
+
+pip install openai psutil requests pillow edge-tts pygame SpeechRecognition
+
+Some optional features may require additional packages.
+
+API Configuration
+
+Never publish API keys on GitHub.
+
+Set your Groq API key as an environment variable.
+
+PowerShell
+
+$env:GROQ_API_KEY="YOUR_API_KEY"
+
+CMD
+
+set GROQ_API_KEY=YOUR_API_KEY
+
+Keep local configuration files and secrets out of the repository.
+
+Running J.A.R.V.I.S.
+
+From the project directory:
+
+python jarvis_gizli_.py
+
+The HUD starts first. The Control Center can be opened from the HUD.
+
+Project Structure
+
+JARVIS-OMEGA/
+│
+├── jarvis_gizli_.py
+├── jarvis_gui.py
+└── README.md
+
+Optional local assets and configuration files can be kept in the same directory.
+
+Terminal
+
+The Control Center provides a Windows command terminal.
+
+Example commands:
+
+ipconfig
+ping google.com -n 4
+dir
+systeminfo
+tasklist
+
+Internal commands include:
+
+cls
+clear
+cd <directory>
+
+Terminal commands are executed with the permissions of the current Windows user.
+
+AI Actions
+
+Depending on the configured version, the AI layer can interpret supported action tags such as:
+
+[AC: application]
+[KAPAT: process]
+[WEB: search query]
+[KOD_OLUSTUR: filename | code]
+[CMD: command]
+
+Review AI-generated actions before allowing them to execute.
+
+Security
+
+This project can execute operating-system commands and interact with local files.
+
+Do not commit:
+
+API keys
+
+Passwords
+
+Access tokens
+
+Local configuration files
+
+Generated logs
+
+Temporary voice files
+
+Recommended .gitignore:
+
+__pycache__/
+*.pyc
+.env
+config.json
+*.log
+jarvis_voice.mp3
+
+GitHub
+
+After placing the three project files in a repository:
+
+git init
+git add .
+git commit -m "Initial JARVIS OMEGA release"
+git branch -M main
+git remote add origin YOUR_REPOSITORY_URL
+git push -u origin main
+
+Disclaimer
+
+This is an independent personal project provided for development and educational purposes.
+
+System commands, application launching, file operations and AI-generated actions can affect the local computer. Use the project responsibly and review commands before execution.
+
+License
+
+No license is included by default. If you want others to reuse, modify or distribute the project, add a license such as MIT after deciding on the terms you want.
